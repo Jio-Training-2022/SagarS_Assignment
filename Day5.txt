@@ -1,0 +1,77 @@
+a=int(input())
+b=int(input())
+m=int(input())
+power=a**b
+print(power)
+if m!=0 and b>0:
+    modm=power%m
+print(modm)
+
+
+***********************************************************************
+
+def print_full_name(first, last):
+    if((len(first)<=10  and len(last))<=10):
+        print("Hello {} {}! You just delved into python.".format(first,last))
+        
+
+if __name__ == '__main__':
+    first_name = input()
+    last_name = input()
+    print_full_name(first_name, last_name)
+
+
+***********************************************************************
+
+
+if __name__ == '__main__':
+    
+    N = int(input())
+    list1=[]
+    c=[]
+    for i in range(0,N):
+            c=input().split()
+            if(c[0]=="insert"):
+                list1.insert(int(c[1]),int(c[2]))
+            elif(c[0]=="print"):
+                print(list1)
+            elif(c[0]=="remove"):
+                list1.remove(int(c[1]))
+            elif(c[0]=="append"):
+                list1.append(int(c[1]))
+            elif(c[0]=="sort"):
+                list1.sort()
+            elif(c[0]=="pop"):
+                list1.pop()
+            elif(c[0]=="reverse"):
+                list1.reverse()
+
+**************************************************************************
+ 
+# 8 test cases passed 2 testcases failed
+
+if __name__ == '__main__':
+    li=[]
+    for i in range(int(input())):
+        name = input()
+        score = float(input())
+        li.append([name,score])
+    for i in range(0,len(li)):
+        for j in range(0,len(li)):
+            if(li[i][1]<li[j][1]):
+                temp=li[i]
+                li[i]=li[j]
+                li[j]=temp
+    for i in range(0,len(li)):
+        for j in range(0,len(li)):
+            if(li[i][1]==li[j][1]):
+                if(li[i][0]<li[j][0] or li[i][0]>li[j][0]):
+                    temp=li[i]
+                    li[i]=li[j]
+                    li[j]=temp                       
+    if(li[1][1]==li[2][1]):
+        print(li[1][0])
+        print(li[2][0])
+    else:print(li[1][0])    
+
+***************************************************************************
