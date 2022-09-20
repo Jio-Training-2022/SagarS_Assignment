@@ -1,0 +1,99 @@
+def swap_case(s):
+    s=list(s)
+    num=len(s)
+    new=""
+    for i in range(0,num):
+        if s[i]==s[i].upper():
+            s[i]=s[i].lower()
+        elif s[i]==s[i].lower():
+            s[i]=s[i].upper()
+        else: s[i]=s[i]
+    for ele in s:
+        new+=ele
+    return new
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
+
+*****************************************************
+
+def split_and_join(line):
+    a=list(line)
+    new=""
+    num=len(a)
+    for i in range(0,num):
+        if a[i]==" ":
+            a[i]="-"
+    for ele in a:
+        new+=ele
+    return new
+
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
+
+*********************************************************
+
+def mutate_string(string, position, character):
+        new=''
+        ci=string
+        str1=list(ci)
+        num=len(str1)
+        a=position
+        b=character
+        for i in range(0,num):
+            if i==a:
+             str1[i]=b
+        for ele in str1:
+            new+=ele
+        return new
+
+if __name__ == '__main__':
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)
+
+*******************************************************
+
+
+if __name__ == '__main__':
+    s = input()
+    str1=list(s)
+    num=len(str1)
+    counta=0
+    countd=0
+    countl=0
+    countu=0
+    for i in range(0,num):
+        if str1[i].isalpha() and str1[i].upper()==str1[i]:
+            countu+=1
+        if str1[i].isalpha() and str1[i].lower()==str1[i]:
+            countl+=1
+        if str1[i].isalpha():
+            counta+=1
+        if str1[i].isdigit():
+            countd+=1
+   
+    if(counta!=0 or countd!=0):
+        print("True")
+    else: print("False")
+    if(counta!=0):
+        print("True")
+    else: print("False")
+    if(countd!=0):
+        print("True")
+    else: print("False")
+    if(countl!=0):
+        print("True")
+    else: print("False")
+    if(countu!=0):
+        print("True")
+    else: print("False")
+
+**********************************************************
+
+
